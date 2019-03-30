@@ -1,0 +1,61 @@
+section{
+  padding: 5px;
+  background-color: #aaaa;
+  border-radius : 6px;
+  padding: 32px;
+  max-width: 500px;
+}
+#question{
+  margin-bottom:50px;
+}
+#result{
+  color:black;
+  font-weight : bold;
+}
+header{
+  background-color: white;
+  position: center;
+  text-align: center;
+  padding: 32px;
+  max-width: 500px;
+}
+footer{
+  background-color: #eee;
+  text-align: center;
+  padding: 32px;
+  max-width: 500px;
+
+}
+label{
+  margin:5px;
+}
+button{
+  margin:5px;
+  border-radius : 4px;
+}
+button:hover{
+  color:blue;
+  border:2px solid;
+}
+.imageResponses{
+ width:100px;
+  height:100px;
+  background-color: white;
+}
+.btnResult{
+ float: right;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td{
+  text-align: left;
+  padding: 16px;
+}
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
