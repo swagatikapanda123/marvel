@@ -7,49 +7,148 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body onload="setQustionAndResponse();">
+  <body>
     <header>
      <h1>HOW WELL DO YOU KNOW MARVEL?</h1>
      <img src="marvel.png" width="500px" height="200px" alt="marvel">
      <p>Marvel Comics is the brand name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company.</p>
      <p>To know more about MARVEL...</p>
      <a href="https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe">Click Here</a>
+     <p>How well do you know the Marvel Cinematic Universe though?</p>
+     <p>Take our quiz and find out...</p>
+
+
     </header> 
-     <section id="questionSet">
-      <h3>Are you ready for the marvel quiz?</h3>
-     <strong>Question<label id="questionNumber">1</label> :<label id="question">who is the king of asgard?</label></strong><br>
-      <button id="choiceA" class="imageResponses" onclick="checkResult(1);"></button>
-      <button id="choiceB" class="imageResponses" onclick="chechresult(2)"></button>
-      <button id="choiceC" class="imageResponses" onclick="checkResult(3);"></button>
-        <br>
-      
-<button id="btnPrev" onclick="setPreviousQuestion();" class="navigator">Prev</button>
-   <button id="btnNext" onclick="setNextQuestion();" class="navigator">Next</button>
-      <button id="btnResult" onclick="showFinalResult();" class="btnResult">Result</button>
+
+    <section id="questionSet">
+    
+     <strong>Question<label id="questionNumber">1</label> :<label id="question">Who is the king of Asgard?</label></strong><br><br>
+     
+     <img src="asgard.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showresult()">Asgard</button>
+      <br><br>
+      <button onclick="showwrong()">Thor</button>
+      <br><br>
+     <button onclick="showwrong()">Thanos</button>
+      <br>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">2</label> :<label id="question">In which film did Black Widow first appear?</label></strong><br><br>
+
+     <img src="blackwidow.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">The incredible Hulk</button>
+      <br><br>
+      <button onclick="showwrong()">The Avengers</button>
+      <br><br>
+     <button onclick="showresult()">Iron Man2</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">3</label> :<label id="question">What song does Baby Groot dance to at the end of the first Guardian of the Galaxy?
+     </label></strong><br><br>
+     <img src="groot.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">"Ain't no mountain high enough"</button>
+      <br><br>
+      <button onclick="showresult()">"I Want You Back"</button>
+      <br><br>
+     <button onclick="showwrong()">"Cherry Bomb"</button>
+      <br>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">4</label> :<label id="question">Who directed THE AVENGERS?
+     </label></strong><br><br>
+     <img src="theav.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+     <button onclick="showwrong()">John Wimbledon</button>
+      <br><br>
+      <button onclick="showwrong()">Stan Lee</button>
+      <br><br>
+     <button onclick="showresult()">Joss Whedon</button>
+      <br>
+      <br>  
+      <strong>Question<label id="questionNumber">5</label> :<label id="question">captain america's shield is made up of which metal?
+     </label></strong><br><br>
+     <img src="cap.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">Titanium</button>
+      <br><br>
+      <button onclick="showresult()">Vibranium</button>
+      <br><br>
+     <button onclick="showwrong()">Chromium</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">6</label> :<label id="question">Thanos is played by which American actor?
+     </label></strong><br><br>
+     <img src="thanos.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">Keneth Brolin</button>
+      <br><br>
+      <button onclick="showwrong()">John Brolin </button>
+      <br><br>
+     <button onclick="showresult()">Josh Brolin</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">7</label> :<label id="question">What is Tony Stark’s final line in the first Iron Man (not including post-credits)?
+      </label></strong><br><br>
+     <img src="tony.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">"Avengers Assemble!"</button>
+      <br><br>
+      <button onclick="showresult()">"I am IRON MAN"</button>
+      <br><br>
+     <button onclick="showwrong()">"I could do this all day"</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">8</label> :<label id="question">Which one is the power stone?
+     </label></strong><br><br>
+     <img src="powerstone.jfif" style="height: 80px;width: 80px"  border="2px solid black"><img src="realitystn.jfif" style="height: 80px;width: 80px" border="2px solid black"><img src="spacestone.jfif" style="height: 80px;width: 80px" border="2px solid black"><br>
+      <button onclick="showresult()">Picture No1</button>
+      <br><br>
+      <button onclick="showwrong()">Picture No2</button>
+      <br><br>
+     <button onclick="showwrong()">Picture No3</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">9</label> :<label id="question">Who is Hela?
+      </label></strong><br><br>
+     <img src="hela.jfif" style="height: 150px;width: 200px" border="2px solid black"><br>
+      <button onclick="showwrong()">Queen of Asgard</button>
+      <br><br>
+      <button onclick="showresult()">The Goddess Of Death</button>
+      <br><br>
+     <button onclick="showwrong()">The Goddess of Darkness</button>
+      <br>
+      <br>
+      <strong>Question<label id="questionNumber">10</label> :<label id="question">In which movie Steve Rogers has said the line"I am with you till the end of the line?"
+      </label></strong><br><br>
+     <img src="steve1.jfif" style="height: 150px;width: 150px" border="2px solid black"><br>
+      <button onclick="showwrong()">The avengers</button>
+      <br><br>
+      <button onclick="showwrong()">Capatin America:The first Avenger</button>
+      <br><br>
+     <button onclick="showresult()">Captain America:Winter Soldier</button>
+      <br>
+      <br>
+
    </section> 
 <br>
-    <section class="resultsOfQuestion">
-      <div id="resultDiv">
-         <label><strong>The result is:</strong></label>
-       <label id="result"></label> 
-      </div>
-    </section>
-    <br>
+ 
 
-     <table id="tblResult">
-       
-     </table>
-  </section>
   <footer>
-    <p>find me on social media</p>
-    <a href="https://twitter.com/swagati89888210" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-twitter-square"></i>Twitter</a>
-  <a href="https://www.instagram.com/_swagatika__/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram-square"></i> Instagram</a>
+    <h2 style="color: blue; padding: 20px;text-align: center;">Created by Swagatika</h2>
+    <h3>Find me on social media</h3>
+    <a href="https://twitter.com/swagati89888210" target="_blank" rel="noopener noreferrer"><i class="fa fa-fa fa-twitter-square"></i>Twitter</a>
+  <a href="https://www.instagram.com/_swagatika__/" target="_blank" rel="noopener noreferrer">Instagram</a>
   <a href="https://www.linkedin.com/in/swagatika-panda-7b0414181/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square"></i>LinkedIN</a>
     <a href="http://github.com/swagatikapanda123" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-github">
     </i>GitHub</a> 
 
   </footer>
-
+ <script>
+  
+  function showresult(){
+    alert("Bravo! Your Response is Correct..");
+  }
+  function showwrong(){
+    alert("oops!! your answer is wrong..");
+  }
+  
+</script>
 </body>
 
 </html>
