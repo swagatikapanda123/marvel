@@ -1,9 +1,11 @@
+
 section{
   padding: 5px;
   background-color: #aaaa;
   border-radius : 6px;
   padding: 32px;
-  max-width: 500px;
+  max-width: 1600px;
+  min-width: 500px;
 }
 #question{
   margin-bottom:50px;
@@ -17,15 +19,22 @@ header{
   position: center;
   text-align: center;
   padding: 32px;
-  max-width: 500px;
+  max-width: 1600px;
+  min-width: 500px;
 }
 footer{
   background-color: #eee;
   text-align: center;
   padding: 32px;
-  max-width: 500px;
-
+  max-width: 1600px;
+  min-width: 500px;
 }
+.container {
+  position: relative;
+  width: 50%;
+}
+
+
 label{
   margin:5px;
 }
