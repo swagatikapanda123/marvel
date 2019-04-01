@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> MARVEL </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+     <h1>HOW WELL DO YOU KNOW MARVEL?</h1>
+     <img src="marvel.png" width="500px" height="200px" alt="marvel">
+     <p>Marvel Comics is the brand name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company.</p>
+     <p>To know more about MARVEL...</p>
+     <a href="https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe">Click Here</a>
+     <p>How well do you know the Marvel Cinematic Universe though?</p>
+     <p>Take our quiz and find out...</p>
+   </header> 
+
+   <section>
+       <div id="quiz"></div>
+       <button id="submit">Get Results</button>
+       <div id="results"></div>
+   </section>
+
+   <script>
+
+        var myQuestions = [
+       {
+          question: "who is the king of asgard?",
+          answers: {
+            a: 'odin',
+            b: 'thor',
+            c: 'thanos'
+            },
+         correctAnswer: 'a'
+        },
+        {
+           question: "What is 30/3?",
+           answers: {
+            a: '3',
+            b: '5',
+            c: '10'
+            },
+          correctAnswer: 'c'
+        }
+      ];   
+
+   var quizContainer = document.getElementById('quiz');
+   var resultContainer = document.getElementById('results');
+   var submitButton = document.getElementById('submit');
+
+   generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+   function generateQuiz(question,quizContainer,resultsContainer,submitButton){
+         function showQuestions(questions, quizContainer){
+        var output = [];
+        var answers;
+
+        for(var i=0; i<questions.length; i++){
+            
+            answers = [];
+            for(letter in questions[i].answers){
+                answers.push(
+                    '<label>'
+                        + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                        + letter + ': '
+                        + questions[i].answers[letter]
+                    + '</label>'
+                );
+            }
+            output.push(
+                '<div class="question">' + questions[i].question + '</div>'
+                + '<div class="answers">' + answers.join('') + '</div>'
+            );
+        }
+        quizContainer.innerHTML = output.join('');
+    }
+
+
+    function showResults(questions, quizContainer, resultsContainer){
+
+        var answerContainers = quizContainer.querySelectorAll('.answers');
+        
+    
+        var userAnswer = '';
+        var numCorrect = 0;
+        
+        
+        for(var i=0; i<questions.length; i++){
+
+            // find selected answer
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+            
+            // if answer is correct
+            if(userAnswer===questions[i].correctAnswer){
+                // add to the number of correct answers
+                numCorrect++;
+                
+                // color the answers green
+                answerContainers[i].style.color = 'lightgreen';
+            }
+            // if answer is wrong or blank
+            else{
+                // color the answers red
+                answerContainers[i].style.color = 'red';
+            }
+        }
+
+        // show number of correct answers out of total
+        resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    }
+
+    // show questions right away
+    showQuestions(questions, quizContainer);
+    
+    // on submit, show results
+    submitButton.onclick = function(){
+        showResults(questions, quizContainer, resultsContainer);
+    }
+
+}
+
+   
+
+</script>
+</body>
+</html>
